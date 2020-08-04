@@ -4,12 +4,13 @@
 void gotoxy(x, y)
 char x, y;
 {
-x = x  - 18;
-y = y  - 19;
- printf("%cY%o;%o", 27, y, x);
+x = x + 31;
+y = y + 31;
+ printf("%cY%c%c", 27, y, x);
 }
 
 void cls() {
+
 printf("%cH%cJ", 27, 27);
 gotoxy(1,1);
 
@@ -32,5 +33,6 @@ cls();
 
 void home()
 {
+
  printf("%cH", 27);
 }
